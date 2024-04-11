@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Oswald:wght@200..700&family=Roboto:wght@500;700&family=Young+Serif&display=swap');
+
+
+
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand{
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    color: #50727B !important;
+}
+
+
+h1, h2, h3, h4{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+
+ul{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.text-primary {
+    color: #50727B !important;
+}
+
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+}
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(73, 80, 87);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 100%;
+}
+
+.svg-inline--fa.fa-w-16 {
+    width: .7em;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+p.lead {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.telephone{
+    padding-top: 1rem;
+}
+
+
+
+
+/* first container */
+@media(min-width: 992px){
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 0px;
+    padding-left: 17rem;
+}
+
+h1, h2{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+
+h3, h4{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+ul{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.text-primary {
+    color: #50727B !important;
+}
+
+
+.subheading {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem
+}
+
+/* nav */
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+
+
+#sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+}
+
+
+#sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-image: initial;
+}
+
+
+
+#sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+
+
+#sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.navbar-expand-lg .navbar-toggler {
+    display: none;
+}
+
+
+
+#sideNav .navbar-brand{
+    display: flex;
+    margin: auto auto 0px;
+    padding: 0.5rem;
+}
+
+
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.telephone{
+    padding-top: 0;
+}
+
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: rgb(73, 80, 87);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 100%;
+}
+
+.svg-inline--fa.fa-w-16 {
+    width: 1em;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+
+/* container section */
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    max-width: 75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section.resume-section .resume-section-content {
+    width: 100%;
+}
+
+section.resume-section {
+    min-height: 100vh;
+}
+
+
+p.lead {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+} 
+ 
