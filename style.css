@@ -1,32 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Oswald:wght@200..700&family=Roboto:wght@500;700&family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-:root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-}
+
 
 
 .js-scroll {
@@ -62,6 +37,10 @@ h1, h2, h3, h4{
     font-weight: 600;
     font-style: normal;
     font-size: 3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #50727B;
 }
 
   
@@ -119,6 +98,23 @@ section.resume-section {
 }
 
 
+.projectViews{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projectViews a{
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    color: rgb(73, 80, 87);
+}
+
+.projectViews a:hover{
+    color: #50727B;
+}
+
 
 
 .social-icons .social-icon {
@@ -132,6 +128,11 @@ section.resume-section {
     font-size: 1.5rem;
     margin-right: 1.5rem;
     border-radius: 100%;
+}
+
+.social-icons .social-icon:hover {
+    background-color: #50727B;
+    color: rgb(255, 255, 255);
 }
 
 .svg-inline--fa.fa-w-16 {
@@ -348,6 +349,10 @@ section.resume-section .resume-section-content {
 
 section.resume-section {
     min-height: 100vh;
+}
+
+section.educate{
+    min-height: 0vh;
 }
 
 

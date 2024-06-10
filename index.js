@@ -1,8 +1,4 @@
-/*!
-    * Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-    */(function ($) {
+(function ($) {
     "use strict"; // Start of use strict
 
     // Smooth scrolling using jQuery easing
@@ -22,17 +18,39 @@
                     "easeInOutExpo"
                 );
                 event.preventDefault(); // Prevent default anchor click behavior
+
+                // Debugging statements
+                console.log("Scrolling to target:", target);
+            } else {
+                // Debugging statements
+                console.log("Target not found:", this.hash);
             }
         }
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            offset: 50 
-        });
+    // $(document).ready(function () {
+    //     // Scroll to the top of the page on reload and ensure the first nav item is active
+    //     setTimeout(function () {
+    //         $('html, body').scrollTop(0);
+    //         $('#sideNav .nav-link').removeClass('active');
+    //         $('#sideNav .nav-item:first-child .nav-link').addClass('active');
+    //         console.log("Scrolled to top and activated first nav item on page load");
+    //     }, 0);
 
-        // Debugging statements
-        console.log("ScrollSpy initialized with target:", scrollSpy._config.target);
+        // ScrollSpy initialization
+        setTimeout(function () {
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                target: '#sideNav',
+                offset: 50
+            });
+
+            // Debugging statements
+            console.log("ScrollSpy initialized with target:", scrollSpy._config.target);
+
+            // Additional debugging to check active elements
+            $(document.body).on('activate.bs.scrollspy', function () {
+                console.log("Active element:", $('.nav-item .active').text());
+            });
+        }, 100);
     });
-})(jQuery); 
+})(jQuery);
