@@ -30,13 +30,49 @@
 }
 
 
-h1, h2, h3, h4{
+.font{
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 350;
+  }
+
+h1, h2{
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 3rem;
+}
+
+
+h3, h4{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+ul{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.text-primary {
+    color: #50727B !important;
+}
+
+
+.subheading {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -78,8 +114,8 @@ section.resume-section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    
+    gap: 40px; 
     padding: 20px;
 }
 
@@ -109,10 +145,6 @@ section.resume-section {
     text-decoration: none;
     font-family: "Oswald", sans-serif;
     color: rgb(73, 80, 87);
-}
-
-.projectViews a:hover{
-    color: #50727B;
 }
 
 
@@ -149,7 +181,7 @@ section.resume-section {
 
 p.lead {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .socials{
@@ -162,10 +194,35 @@ p.lead {
     padding-top: 1rem;
 }
 
+body{
+    overflow-x: hidden;
+}
 
+.param {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.param p {
+    margin: 0;
+}
+
+.Linkbutton{
+    width: 100%;
+    border: 1px solid #50727B;
+    border-radius: 5px;
+}
+
+.Linkbutton:hover{
+    background-color: #50727B;
+}
 
 
 /* first container */
+
 @media(min-width: 992px){
 *,
 ::before,
@@ -178,6 +235,14 @@ body {
     padding-top: 0px;
     padding-left: 17rem;
 }
+
+
+.font{
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 350;
+  }
 
 h1, h2{
     text-transform: uppercase;
@@ -215,7 +280,7 @@ ul{
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem
-}
+} 
 
 /* nav */
 
@@ -328,12 +393,12 @@ ul{
     height: 1em;
     overflow: visible;
     vertical-align: -.125em;
-}
+} 
 
 
 /* container section */
 
-section.resume-section {
+ section.resume-section {
     display: flex;
     align-items: center;
     max-width: 75rem;
@@ -360,5 +425,8 @@ p.lead {
     font-size: 1.3rem;
     font-weight: 300;
 }
-} 
- 
+
+
+
+}  
+
