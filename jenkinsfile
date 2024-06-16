@@ -19,6 +19,7 @@ pipeline {
                 }
             }
 
+
             stage('deploy') {
                 steps {
                     withCredentials([usernaemPassword(credentialsId: "${GITHUB_CREDENTIALS}", usernameVariable: 'GiTHUB_USER', passwordVariable: "GITHUB_TOKEN" )]) {
