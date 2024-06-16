@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GITHUB_REPO = 'https://github.com/CodewithSegNet/portfolio.github.io'
-        GITHUB_CREDENTIALS = 'git-credentials'
+        GITHUB_CREDENTIALS = 'github-credentials'
     }
         stages{
             stage('checkout') {
