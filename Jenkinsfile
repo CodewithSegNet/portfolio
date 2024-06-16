@@ -26,13 +26,13 @@ pipeline {
                         sh 'git config --global user.email "segun@yahoo.com"'
                         sh 'git config --global user.name "jenkins"'
 
-                        sh '''
+                        sh """
                             git checkout -b gh-pages
                             git add -f build
                             git commit -m "Deploy to Github Pages"
-                            git push -f https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/CodewithSegNet/portfolio.github.io
+                            git push -f https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/CodewithSegNet/portfolio.github.io gh-pages
 
-                        '''
+                        """
                     }
                 }
             }
