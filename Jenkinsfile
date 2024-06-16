@@ -22,7 +22,7 @@ pipeline {
 
             stage('deploy') {
                 steps {
-                    withCredentials([usernaemPassword(credentialsId: "${GITHUB_CREDENTIALS}", usernameVariable: 'GiTHUB_USER', passwordVariable: "GITHUB_TOKEN" )]) {
+                    withCredentials([usernamePassword(credentialsId: "${GITHUB_CREDENTIALS}", usernameVariable: 'GiTHUB_USER', passwordVariable: "GITHUB_TOKEN" )]) {
                         sh 'git config --global user.email "segun@yahoo.com"'
                         sh 'git config --global user.name "jenkins"'
 
