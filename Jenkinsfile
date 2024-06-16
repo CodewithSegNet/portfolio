@@ -39,8 +39,6 @@ pipeline {
                         }
 
                         sh """
-                            git add -f build
-                            git commit -m "Deploy to Github Pages"
                             git push -f https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/CodewithSegNet/portfolio.github.io gh-pages
 
                         """
