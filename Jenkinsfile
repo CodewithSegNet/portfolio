@@ -26,8 +26,19 @@ pipeline {
                         sh 'git config --global user.email "segun@yahoo.com"'
                         sh 'git config --global user.name "jenkins"'
 
+                        // check if the 'gh-pages' branch exists
+                        script {
+                            def branch = 'gh-pages'
+                            if (sh(script: "git show-ref --verify --quiet refs/heads/${branch}", returnStatus: true) !=0) {
+                                echo "'${branch}' branch does not exist, creating it"
+                                sh "git checkout -b ${branch}"
+                            } else {
+                                echo "'${branch}' branch already exists, switching to it."
+                                sh "git checkout ${branch}"
+                            }
+                        }
+
                         sh """
-                            git checkout -b gh-pages
                             git add -f build
                             git commit -m "Deploy to Github Pages"
                             git push -f https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/CodewithSegNet/portfolio.github.io gh-pages
