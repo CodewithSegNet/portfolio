@@ -3,6 +3,7 @@
 
 
 
+/* Js scroll */
 
 .js-scroll {
     opacity: 0;
@@ -12,23 +13,17 @@
     opacity: 1;
 }
 
+/* end of js js scroll */
 
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+
+
+
+/*     fixed Elements     */
+
+
+body{
+    overflow-x: hidden;
 }
-
-
-
-.navbar-brand{
-    font-family: "Oswald", sans-serif;
-    font-size: 1.3rem;
-    color: #50727B !important;
-}
-
 
 .font{
     font-family: var(--bs-font-sans-serif);
@@ -36,6 +31,7 @@
     line-height: 1.5;
     font-weight: 350;
   }
+  
 
 h1, h2{
     text-transform: uppercase;
@@ -56,95 +52,62 @@ h3, h4{
     font-size: 1.5rem;
 }
 
-ul{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;   
+
+
+hr{
+    margin: 0;
+    padding: 0;
 }
 
-.text-primary {
+
+
+
+/*  End of Fixed Elements */
+
+
+
+
+
+/*     NavBar     */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.navbar-brand{
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
     color: #50727B !important;
 }
 
-
-.subheading {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1rem
-}
 
 .navbar-dark .navbar-nav .nav-link.active {
     color: #50727B;
 }
 
-  
-
-.font{
-    font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 350;
-  }
-
-
-ul{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;   
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55);
 }
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #50727B;
+}
+
+/*    End  of  NavBar     */
+
+
+
+/*  first container */
+
 
 .text-primary {
     color: #50727B !important;
-}
-
-
-section.resume-section {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 8rem;
-    padding-bottom: 5rem;
-    max-width: 75rem;
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    
-    gap: 40px; 
-    padding: 20px;
-}
-
-.box {
-    background-color: #f0f0f0;
-    text-align: center;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.box img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-}
-
-
-.projectViews{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.projectViews a{
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-    color: rgb(73, 80, 87);
 }
 
 
@@ -180,9 +143,10 @@ section.resume-section {
 }
 
 p.lead {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 350;
 }
+
 
 .socials{
     display: flex;
@@ -194,8 +158,130 @@ p.lead {
     padding-top: 1rem;
 }
 
-body{
-    overflow-x: hidden;
+/* End of First container */
+
+
+
+
+/*   resume section    */
+
+
+.subheading {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem
+}
+
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+}
+
+
+
+ul{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+/*  End of resume section    */
+
+
+
+
+
+/*    Grid Section    */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    
+    gap: 40px; 
+    padding: 20px;
+}
+
+.download{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.download a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 350;
+}
+
+.download a:hover{
+    color: #50727B;
+    cursor: pointer;
+}
+
+.headerline{
+    width: 30%;
+    border: 1px solid #000000;
+}
+
+
+.download2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.download2 a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 350;
+}
+
+.download2 a:hover{
+    color: #50727B;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.box .title{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.title{
+    text-align: left;
+    text-transform: capitalize;
+    padding-top: 7px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.title span{
+font-weight: 700;
+text-decoration: none;
 }
 
 .param {
@@ -208,21 +294,48 @@ body{
 
 .param p {
     margin: 0;
+    padding: 1rem .8rem;
+    text-align: left;
+    font-weight: 350;
 }
 
 .Linkbutton{
     width: 100%;
-    border: 1px solid #50727B;
-    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgb(73, 80, 87);
+    color: rgba(255, 255, 255, 0.55); 
+
 }
 
 .Linkbutton:hover{
     background-color: #50727B;
+    color: rgba(255, 255, 255, 0.55)
 }
 
 
-/* first container */
+.projectViews{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.projectViews a{
+    text-decoration: none;
+    padding: .5rem;
+    font-family: "Oswald", sans-serif;
+}
+
+/*  End of resume section    */
+
+
+
+
+
+
+
+
+/*       DeskTop Screen         */
 @media(min-width: 992px){
 *,
 ::before,
@@ -356,6 +469,11 @@ ul{
 }
 
 
+.headerline{
+    width: 10%;
+    border: 1px solid #000000;
+}
+
 
 .socials{
     display: flex;
@@ -426,7 +544,55 @@ p.lead {
     font-weight: 300;
 }
 
+.param p {
+    margin: 0;
+    padding: .7rem .8rem;
+    text-align: left;
+    font-weight: 300;
+}
 
+
+.download{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    flex-direction: row;
+}
+
+.download a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 350;
+}
+
+.download a:hover{
+    color: #50727B;
+    cursor: pointer;
+}
+
+.headerline{
+    width: 10%;
+    border: 1px solid #000000;
+}
+
+
+.download2{
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
+    flex-direction: row;
+}
+
+.download2 a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 350;
+}
+
+.download2 a:hover{
+    color: #50727B;
+    cursor: pointer;
+}
 
 }  
 
