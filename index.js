@@ -28,14 +28,14 @@
         }
     });
 
-    // $(document).ready(function () {
-    //     // Scroll to the top of the page on reload and ensure the first nav item is active
-    //     setTimeout(function () {
-    //         $('html, body').scrollTop(0);
-    //         $('#sideNav .nav-link').removeClass('active');
-    //         $('#sideNav .nav-item:first-child .nav-link').addClass('active');
-    //         console.log("Scrolled to top and activated first nav item on page load");
-    //     }, 0);
+    $(document).ready(function () {
+        // Scroll to the top of the page on reload and ensure the first nav item is active
+        setTimeout(function () {
+            $('html, body').scrollTop(0);
+            $('#sideNav .nav-link').removeClass('active');
+            $('#sideNav .nav-item:first-child .nav-link').addClass('active');
+            console.log("Scrolled to top and activated first nav item on page load");
+        }, 0);
 
         // ScrollSpy initialization
         setTimeout(function () {
