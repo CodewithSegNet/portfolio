@@ -255,4 +255,69 @@
         });
     }
 
+    // --- Project Modal Logic ---
+    const modalOverlay = document.getElementById('project-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalTags = document.getElementById('modal-tags');
+    const modalLinks = document.getElementById('modal-links');
+
+    if (modalOverlay && modalCloseBtn) {
+        function openModal(card) {
+            // Extract content from card
+            const imgElement = card.querySelector('.project-image');
+            const titleElement = card.querySelector('.project-title');
+            const descElement = card.querySelector('.project-desc');
+            const tagsElement = card.querySelector('.project-tags');
+            const linksElement = card.querySelector('.project-links');
+
+            // Populate modal
+            if (imgElement) {
+                modalImage.src = imgElement.src;
+                modalImage.alt = imgElement.alt;
+            }
+            if (titleElement) modalTitle.textContent = titleElement.textContent;
+            if (descElement) modalDesc.innerHTML = descElement.innerHTML;
+            if (tagsElement) modalTags.innerHTML = tagsElement.innerHTML;
+            if (linksElement) modalLinks.innerHTML = linksElement.innerHTML;
+
+            // Show modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Add click listeners to cards
+        projectCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Prevent opening modal if a link inside the card was clicked directly
+                if(e.target.closest('a') || e.target.closest('button')) return;
+                openModal(card);
+            });
+        });
+
+        // Close listeners
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
 })();
